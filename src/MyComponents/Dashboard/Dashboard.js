@@ -6,9 +6,9 @@ import Typography from "@mui/material/Typography";
 import MuiAppBar from "@mui/material/AppBar";
 import { styled, useTheme } from "@mui/material/styles";
 import Toolbar from "@mui/material/Toolbar";
-import Button from "@mui/material/Button";
-import nashikOne from "../Dashboard/nashikone.svg";
-import nashikTwo from "../Dashboard/nashiktwo.svg";
+import Button from "react-bootstrap/Button";
+import nashikOne from "../Dashboard/nashikOne.png";
+import nashikTwo from "../Dashboard/nashikTwo.png";
 import nashikThree from "../Dashboard/nashikthree.svg";
 // import nashikFour from "../Dashboard/nashikfour.svg";
 import Form from "react-bootstrap/Form";
@@ -204,49 +204,22 @@ export const Dashboard = ({ name, ...props }) => {
 
   return (
     <>
-      <AppBar position="flex" sx={{ bgcolor: "#294a69" }}>
+      <AppBar position="flex" sx={{ bgcolor: "#ffffff" }}>
         <Toolbar>
           <Typography
             variant="h6"
             noWrap
             component="div"
             style={{
-              fontSize: `${fontSize}px`,
+              // fontSize: `${fontSize}px`,
               fontFamily: "poppins, sans-serif",
+              color: "black",
+              fontWeight: "600",
+              fontSize: "15px",
             }}
           >
-            <a
-              href="https://smartcities.gov.in/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="./smart_city_logo.jpg"
-                alt="smart city logo"
-                height={"40px"}
-                style={{ margin: "2px" }}
-              />
-            </a>
             <img
-              style={{ height: "40px", margin: "5px" }}
-              src="./nashik_smart_city_logo.jpg"
-              alt="NMSCDCL Logo"
-            />
-            <a
-              href="https://nmc.gov.in/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="./nashik_municipal_logo_red.png"
-                alt="municipal logo red"
-                height={"40px"}
-                width={"40px"}
-                style={{ margin: "2px" }}
-              />
-            </a>
-            <img
-              src="./G_Ram_Logo.svg"
+              src="./mmrclLogo.png"
               alt="GRam Logo"
               height={"40px"}
               style={{
@@ -255,8 +228,9 @@ export const Dashboard = ({ name, ...props }) => {
               }}
               onClick={handleHomeLogo}
             />
-            G-RAM GIS
+            MMRCL GEOPORTAL
           </Typography>
+
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} />
           <Typography
             variant="h6"
@@ -265,57 +239,63 @@ export const Dashboard = ({ name, ...props }) => {
               flexGrow: 4,
               textAlign: "center",
               fontSize: `${fontSize + 3}px`,
-              fontFamily: "poppins, sans-serif",
+              // fontFamily: "poppins, sans-serif",
+              fontWeight: "600",
+              color: "black",
             }}
           >
-            Nashik Municipal Smart City Development Corporation Limited
+            {/* MMRCL GEOPORTAL */}
           </Typography>
 
           <Button
-            color="inherit"
+            variant="light"
             style={{
               transform: `scale(${scale})`,
               textDecoration: "none",
               fontFamily: "poppins, sans-serif",
+              fontWeight: "600",
             }}
             onClick={handleAboutUs}
           >
-            About us
+            ABOUT US
           </Button>
           <Button
-            color="inherit"
+            variant="light"
             style={{
               transform: `scale(${scale})`,
               textDecoration: "none",
               fontFamily: "poppins, sans-serif",
+              fontWeight: "600",
             }}
             onClick={handleShow}
           >
-            Contact us
+            CONTACT US
           </Button>
           <Button
-            color="inherit"
+            variant="light"
             style={{
               transform: `scale(${scale})`,
               textDecoration: "none",
               fontFamily: "poppins, sans-serif",
+              fontWeight: "600",
             }}
             onClick={handleShowFeedback}
           >
-            Feedback
+            FEEDBACK
           </Button>
           <Button
-            color="inherit"
+            variant="light"
             style={{
               transform: `scale(${scale})`,
               textDecoration: "none",
               fontFamily: "poppins, sans-serif",
+              fontWeight: "600",
             }}
             onClick={handleGisMap}
           >
-            ABD Utility GIS System
+            ABD UTILITY GIS SYSTEM
           </Button>
-          <span
+          {/* <span
             style={{
               border: "1px solid white",
               padding: "5px 10px",
@@ -343,7 +323,7 @@ export const Dashboard = ({ name, ...props }) => {
             onClick={handleDecrement}
           >
             -
-          </span>
+          </span> */}
 
           {fname ? (
             <Button
@@ -357,7 +337,13 @@ export const Dashboard = ({ name, ...props }) => {
             <Button
               color="inherit"
               onClick={handleLogin}
-              style={{ transform: `scale(${scale})` }}
+              style={{
+                transform: `scale(${scale})`,
+                backgroundColor: "#041133",
+                padding: "10px",
+                paddingLeft: "20px",
+                paddingRight: "20px",
+              }}
             >
               Login
             </Button>
@@ -365,7 +351,7 @@ export const Dashboard = ({ name, ...props }) => {
         </Toolbar>
       </AppBar>
 
-      <Carousel fade>
+      <Carousel fade style={{ padding: "25px" }}>
         <Carousel.Item interval={5000}>
           <div style={{ height: "90vh", width: "100vw" }}>
             <img
@@ -374,7 +360,40 @@ export const Dashboard = ({ name, ...props }) => {
               style={{ height: "100%", width: "100%", objectFit: "cover" }}
             />
           </div>
-          <Carousel.Caption></Carousel.Caption>
+          <Carousel.Caption style={{ textAlign: "center", bottom: "220px" }}>
+            <h1
+              style={{
+                fontSize: "46px",
+              }}
+            >
+              The More Things Change,
+            </h1>
+            <h1 style={{ fontSize: "46px" }}>The More They Remain The</h1>
+            <h1 style={{ fontSize: "46px", marginBottom: "40px" }}> Same</h1>
+            <span
+              style={{
+                fontFamily: "Baskervville",
+                fontSize: "18px",
+              }}
+            >
+              The Mumbai Metro Line - 3 (MML -3) stands out as a pivotal
+            </span>
+            <br></br>
+            <span style={{ fontFamily: "Baskervville", fontSize: "18px" }}>
+              intiative aimed at enhancing the tranportation landscape in
+            </span>
+            <br />
+            <span style={{ fontFamily: "Baskervville", fontSize: "18px" }}>
+              India's financial hub
+            </span>
+            <br></br>
+            <Button
+              variant="light"
+              style={{ color: "black", margin: "10px", padding: "12px" }}
+            >
+              Explore GIS
+            </Button>
+          </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item interval={5000}>
           <div style={{ height: "90vh", width: "100vw" }}>
@@ -384,9 +403,42 @@ export const Dashboard = ({ name, ...props }) => {
               style={{ height: "100%", width: "100%", objectFit: "cover" }}
             />
           </div>
-          <Carousel.Caption></Carousel.Caption>
+          <Carousel.Caption style={{ textAlign: "center", bottom: "220px" }}>
+            <h1
+              style={{
+                fontSize: "46px",
+              }}
+            >
+              The More Things Change,
+            </h1>
+            <h1 style={{ fontSize: "46px" }}>The More They Remain The</h1>
+            <h1 style={{ fontSize: "46px", marginBottom: "40px" }}> Same</h1>
+            <span
+              style={{
+                fontFamily: "Baskervville",
+                fontSize: "18px",
+              }}
+            >
+              The Mumbai Metro Line - 3 (MML -3) stands out as a pivotal
+            </span>
+            <br></br>
+            <span style={{ fontFamily: "Baskervville", fontSize: "18px" }}>
+              intiative aimed at enhancing the tranportation landscape in
+            </span>
+            <br />
+            <span style={{ fontFamily: "Baskervville", fontSize: "18px" }}>
+              India's financial hub
+            </span>
+            <br></br>
+            <Button
+              variant="light"
+              style={{ color: "black", margin: "10px", padding: "12px" }}
+            >
+              Explore GIS
+            </Button>
+          </Carousel.Caption>
         </Carousel.Item>
-        <Carousel.Item interval={5000}>
+        {/* <Carousel.Item interval={5000}>
           <div style={{ height: "90vh", width: "100vw" }}>
             <img
               src={nashikThree}
@@ -395,7 +447,7 @@ export const Dashboard = ({ name, ...props }) => {
             />
           </div>
           <Carousel.Caption></Carousel.Caption>
-        </Carousel.Item>
+        </Carousel.Item> */}
       </Carousel>
 
       <>
@@ -419,7 +471,6 @@ export const Dashboard = ({ name, ...props }) => {
               <span style={{ marginBottom: "10px" }}>
                 Nashik Municipal Smart City Development Corporation Limited
                 <br></br>
-                (NMSCDCL)
               </span>
               <br />
               <br />
