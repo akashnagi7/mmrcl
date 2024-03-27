@@ -1,0 +1,4 @@
+id,name,username,email,phone_number,is_active,groups
+38,testuser,testuser,testuser@gmail.com,9999999999,True,Superintendent
+39,Pranav Kolambkar,pranav23,pranavkolambkar23@gmail.com,8104702997,True,Superintendent
+14,pranavssssssrt,pranav,pranav@gmail.com,9999999999,False,Superintendent

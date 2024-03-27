@@ -1,0 +1,4 @@
+.custom-pagination .page-item.active .page-link {
+  background-color: #284a68;
+  color: white; /* You can also set the text color */
+}
