@@ -210,6 +210,17 @@ const NashikHomeNew = (props) => {
     sessionStorage.clear();
     window.location.href = "/login";
   }
+
+  function handleAboutUs() {
+    console.log("handleAboutUs");
+    window.location.replace("/about");
+  }
+
+  function handleContactUs() {
+    console.log("handleContactUs");
+    window.location.replace("/contact");
+  }
+
   const [drawopen, setDrawOpen] = React.useState(false);
   const handleDrawClick = () => {
     setDrawOpen(!drawopen);
@@ -517,16 +528,15 @@ const NashikHomeNew = (props) => {
       .then((response) => {
         console.log(response.data.data, "Predefined queriess");
         setPredefinedQuery(response.data.data);
-
       })
       .catch((error) => {
         console.error(error);
       });
   }, []);
 
-  const deletePredefinedQuery = () =>{
+  const deletePredefinedQuery = () => {
     props.changePredefinedQuery();
-  }
+  };
 
   // ***********************************Swipe*****************************************//
   const [show3, setShow3] = useState(false);
@@ -1127,53 +1137,27 @@ const NashikHomeNew = (props) => {
     <>
       <Box sx={{ display: "flex" }} className="nashiksmartcityfont">
         <CssBaseline />
-        {/* <AppBar position="fixed" sx={{ bgcolor: "#556080" }}> */}
-        <AppBar position="fixed" sx={{ bgcolor: "#294A69" }}>
+
+        <AppBar position="fixed" sx={{ bgcolor: "#ffffff", color: "black" }}>
           <Toolbar>
             <Typography
               variant="h6"
               noWrap
               component="div"
-              style={{ fontSize: "14px", fontFamily: "poppins, sans-serif" }}
+              style={{
+                fontSize: "14px",
+                fontFamily: "poppins, sans-serif",
+                fontWeight: "600",
+              }}
             >
-              <a
-                href="https://smartcities.gov.in/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="./smart_city_logo.jpg"
-                  alt="smart city logo"
-                  height={"40px"}
-                  style={{ margin: "2px" }}
-                />
-              </a>
               <img
-                style={{ height: "40px", margin: "5px" }}
-                src="./nashik_smart_city_logo.jpg"
-                alt="NMSCDCL Logo"
-              />
-              <a
-                href="https://nmc.gov.in/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="./nashik_municipal_logo_red.png"
-                  alt="municipal logo red"
-                  height={"40px"}
-                  width={"40px"}
-                  style={{ margin: "2px" }}
-                />
-              </a>
-              <img
-                src="./G_Ram_Logo.svg"
-                alt="GRam Logo"
+                src="./mmrclLogo.png"
+                alt="mmrcl logo"
                 height={"40px"}
                 style={{ marginRight: "5px", cursor: "pointer" }}
-                onClick={handleHomeLogo}
+                // onClick={handleHomeLogo}
               />
-              G-RAM GIS
+              MMRCL GEOPORTAL
             </Typography>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} />
             <Typography
@@ -1186,13 +1170,43 @@ const NashikHomeNew = (props) => {
                 fontFamily: "poppins, sans-serif",
               }}
             >
-              Nashik Municipal Smart City Development Corporation Limited
+              {/* Nashik Municipal Smart City Development Corporation Limited */}
             </Typography>
+
+            <Button
+              variant="light"
+              style={{
+                // transform: `scale(${scale})`,
+                textDecoration: "none",
+                fontFamily: "poppins, sans-serif",
+                fontWeight: "600",
+                fontSize: "12px",
+              }}
+              onClick={handleAboutUs}
+            >
+              ABOUT US
+            </Button>
+
+            <Button
+              variant="light"
+              style={{
+                // transform: `scale(${scale})`,
+                textDecoration: "none",
+                fontFamily: "poppins, sans-serif",
+                fontWeight: "600",
+                fontSize: "12px",
+              }}
+              // onClick={handleGisMap}
+            >
+              GIS SYSTEM
+            </Button>
             <Button
               color="inherit"
               style={{
-                transform: "scale(0.8)",
+                // transform: "scale(0.8)",
                 fontFamily: "poppins, sans-serif",
+                fontWeight: "600",
+                fontSize: "12px",
               }}
             >
               {fname ? (
@@ -1216,20 +1230,35 @@ const NashikHomeNew = (props) => {
 
             {fname ? (
               <Button
-                color="inherit"
+                // color="inherit"
                 onClick={handleLogout}
                 style={{
                   transform: "scale(0.8)",
                   fontFamily: "poppins, sans-serif",
+                  backgroundColor: "#E30613",
+                  color: "white",
+                  paddingLeft: "30px",
+                  paddingRight: "30px",
+                  textTransform: "none",
+                  borderRadius: "20px",
+                  height: "42px",
                 }}
               >
                 Logout
               </Button>
             ) : (
               <Button
-                color="inherit"
                 onClick={handleLogin}
-                style={{ transform: "scale(0.8)" }}
+                style={{
+                  transform: "scale(0.8)",
+                  backgroundColor: "#E30613",
+                  color: "white",
+                  paddingLeft: "30px",
+                  paddingRight: "30px",
+                  textTransform: "none",
+                  borderRadius: "20px",
+                  height: "42px",
+                }}
               >
                 Login
               </Button>
@@ -1263,7 +1292,7 @@ const NashikHomeNew = (props) => {
                         fontFamily: "poppins, sans-serif",
                       }}
                     >
-                      <span style={{ margin: "10px" }}>Collapse</span>
+                      <span style={{ marginRight: "12px" }}>Collapse</span>
                       <ChevronLeftIcon />
                     </div>
                   ) : (
@@ -1276,7 +1305,19 @@ const NashikHomeNew = (props) => {
             <ListItemButton onClick={(event) => handleClick("Layers")}>
               <Tooltip title="Layers">
                 <ListItemIcon>
-                  <LayersIcon />
+                  <LayersIcon
+                    style={{
+                      borderRadius: "50%",
+                      width: "30px",
+                      height: "30px",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      boxShadow:
+                        "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px",
+                      color: "#1C3B68",
+                    }}
+                  />
                 </ListItemIcon>
               </Tooltip>
               <ListItemText primary="Layers" />
@@ -1286,7 +1327,19 @@ const NashikHomeNew = (props) => {
             <ListItemButton onClick={(event) => handleClick("Basemap")}>
               <Tooltip title="Basemap">
                 <ListItemIcon>
-                  <PublicIcon />
+                  <PublicIcon
+                    style={{
+                      borderRadius: "50%",
+                      width: "30px",
+                      height: "30px",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      boxShadow:
+                        "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px",
+                      color: "#1C3B68",
+                    }}
+                  />
                 </ListItemIcon>
               </Tooltip>
               <ListItemText primary="Basemap" />
@@ -1296,7 +1349,19 @@ const NashikHomeNew = (props) => {
             <ListItemButton onClick={(event) => handleClick("Legend")}>
               <Tooltip title="Legend">
                 <ListItemIcon>
-                  <LegendToggleIcon />
+                  <LegendToggleIcon
+                    style={{
+                      borderRadius: "50%",
+                      width: "30px",
+                      height: "30px",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      boxShadow:
+                        "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px",
+                      color: "#1C3B68",
+                    }}
+                  />
                 </ListItemIcon>
               </Tooltip>
               <ListItemText primary="Legend" />
@@ -1311,7 +1376,19 @@ const NashikHomeNew = (props) => {
                     onClick={handleUserManagement}
                   >
                     <ListItemIcon>
-                      <PersonIcon />
+                      <PersonIcon
+                        style={{
+                          borderRadius: "50%",
+                          width: "30px",
+                          height: "30px",
+                          display: "flex",
+                          justifyContent: "center",
+                          alignItems: "center",
+                          boxShadow:
+                            "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px",
+                          color: "#1C3B68",
+                        }}
+                      />
                     </ListItemIcon>
                   </Tooltip>
                   <Typography style={{ fontSize: "12px" }}>
@@ -1329,7 +1406,18 @@ const NashikHomeNew = (props) => {
                     <i
                       class="fa fa-home"
                       aria-hidden="true"
-                      style={{ fontSize: "22px" }}
+                      style={{
+                        borderRadius: "50%",
+                        width: "30px",
+                        height: "30px",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        boxShadow:
+                          "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px",
+                        color: "#1C3B68",
+                        fontSize: "22px",
+                      }}
                     ></i>
                   </ListItemIcon>
                 </Tooltip>
@@ -1355,7 +1443,7 @@ const NashikHomeNew = (props) => {
         <div style={{ marginTop: "64px", width: "-webkit-fill-available" }}>
           <NashikHomemain />
         </div>
-
+            
         <RightDrawer variant="permanent" open={rightopen} anchor="right">
           <DrawerHeader />
           <Divider />
@@ -1566,8 +1654,9 @@ const NashikHomeNew = (props) => {
             bottom: 0,
             display: "flex",
             padding: "0 20px",
+            height: "42px",
           }}
-          sx={{ bgcolor: "#294A69" }}
+          sx={{ bgcolor: "#1C3B68" }}
         >
           <div
             style={{
@@ -1576,14 +1665,17 @@ const NashikHomeNew = (props) => {
               justifyContent: "space-between",
             }}
           >
-            <Typography variant="body1" color="inherit">
-              Copyright © 2023 NMSCDCL. All rights reserved
+            <Typography
+              variant="body1"
+              color="inherit"
+            >
+              Copyright © 2024 MMRCL Geoportal. All rights reserved
             </Typography>
 
             <strong>
               <img
                 style={{
-                  height: "18px",
+                  height: "32px",
                   margin: "5px",
                   paddingRight: "10px",
                 }}
@@ -1605,7 +1697,7 @@ const NashikHomeNew = (props) => {
           <Modal.Header
             style={{
               color: "white",
-              background: "#294A69",
+              background: "#1C3B68",
               padding: "9px",
             }}
             closeButton
@@ -1850,7 +1942,7 @@ const NashikHomeNew = (props) => {
         {/* Spatial Query */}
         <Modal show={show2} onHide={handleClose2} backdrop="static" centered>
           <Modal.Header
-            style={{ color: "white", background: "#294A69", padding: "10px" }}
+            style={{ color: "white", background: "#1C3B68", padding: "10px" }}
             closeButton
           >
             <Modal.Title
@@ -2011,7 +2103,7 @@ const NashikHomeNew = (props) => {
           style={{ fontFamily: "poppins, sans-serif" }}
         >
           <Modal.Header
-            style={{ color: "white", background: "#294A69", padding: "10px" }}
+            style={{ color: "white", background: "#1C3B68", padding: "10px" }}
             closeButton
           >
             <Modal.Title style={{ fontSize: "14px" }}>
@@ -2186,7 +2278,7 @@ const NashikHomeNew = (props) => {
           centered
         >
           <Modal.Header
-            style={{ color: "white", background: "#294A69", padding: "10px" }}
+            style={{ color: "white", background: "#1C3B68", padding: "10px" }}
             closeButton
           >
             <Modal.Title style={{ fontSize: "14px" }}>
@@ -2400,7 +2492,7 @@ const NashikHomeNew = (props) => {
           style={{ fontFamily: "poppins, sans-serif" }}
         >
           <Modal.Header
-            style={{ color: "white", background: "#294A69", padding: "10px" }}
+            style={{ color: "white", background: "#1C3B68", padding: "10px" }}
             closeButton
           >
             <Modal.Title style={{ fontSize: "14px" }}>
@@ -2445,7 +2537,7 @@ const NashikHomeNew = (props) => {
           style={{ fontFamily: "poppins, sans-serif" }}
         >
           <Modal.Header
-            style={{ color: "white", background: "#294A69", padding: "10px" }}
+            style={{ color: "white", background: "#1C3B68", padding: "10px" }}
             closeButton
           >
             <Modal.Title style={{ fontSize: "14px" }}>
@@ -2515,7 +2607,7 @@ const NashikHomeNew = (props) => {
           style={{ fontFamily: "poppins, sans-serif" }}
         >
           <Modal.Header
-            style={{ color: "white", background: "#294A69", padding: "10px" }}
+            style={{ color: "white", background: "#1C3B68", padding: "10px" }}
             closeButton
           >
             <Modal.Title style={{ fontSize: "14px" }}>

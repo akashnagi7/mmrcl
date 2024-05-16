@@ -22,7 +22,7 @@ function Basemap(props) {
           <div
             className="card-header"
             style={{
-              background: "#294A69",
+              background: "#1C3B68",
               color: "white",
               display: "flex",
               alignItems: "center",

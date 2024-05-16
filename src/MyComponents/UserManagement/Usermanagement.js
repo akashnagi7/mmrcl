@@ -1079,7 +1079,7 @@ const Usermanagement = (props) => {
                           marginBottom: "20px",
                         }}
                       ></div>
-                      <span style={{ color: "#294a69", fontWeight: "500" }}>
+                      <span style={{ color: "#1C3B68", fontWeight: "500" }}>
                         <h5> Add New User</h5>
                         <h6> Admin Can Register New User Here!</h6>
                       </span>
@@ -1168,7 +1168,7 @@ const Usermanagement = (props) => {
                       >
                         <Button
                           variant="contained"
-                          style={{ backgroundColor: "#294a69" }}
+                          style={{ backgroundColor: "#1C3B68" }}
                           onClick={submitHandler}
                         >
                           Submit
@@ -1241,7 +1241,7 @@ const Usermanagement = (props) => {
                 <table class="table table-striped table-sm table-bordered">
                   <thead
                     style={{
-                      backgroundColor: "#294a69",
+                      backgroundColor: "#1C3B68",
                       color: "white",
                       position: "sticky",
                       top: 0,
@@ -1289,7 +1289,7 @@ const Usermanagement = (props) => {
                             <Button
                               variant="contained"
                               style={{
-                                backgroundColor: "#294a69",
+                                backgroundColor: "#1C3B68",
                                 transform: "scale(0.8)",
                               }}
                               onClick={() => handleUserEdit(user)}
@@ -1312,7 +1312,7 @@ const Usermanagement = (props) => {
                               <Button
                                 variant="contained"
                                 style={{
-                                  backgroundColor: "#294a69",
+                                  backgroundColor: "#1C3B68",
                                   transform: "scale(0.8)",
                                 }}
                                 onClick={() => handleUserDelete(user.id)}
@@ -1507,7 +1507,7 @@ const Usermanagement = (props) => {
                 <table class="table table-striped table-sm table-bordered">
                   <thead
                     style={{
-                      backgroundColor: "#294a69",
+                      backgroundColor: "#1C3B68",
                       color: "white",
                       position: "sticky",
                       top: 0,
@@ -1670,7 +1670,7 @@ const Usermanagement = (props) => {
                 <table class="table table-striped table-sm table-bordered">
                   <thead
                     style={{
-                      backgroundColor: "#294a69",
+                      backgroundColor: "#1C3B68",
                       color: "white",
                       position: "sticky",
                       top: 0,
@@ -1852,7 +1852,7 @@ const Usermanagement = (props) => {
                 <table class="table table-striped table-sm table-bordered">
                   <thead
                     style={{
-                      backgroundColor: "#294a69",
+                      backgroundColor: "#1C3B68",
                       color: "white",
                       position: "sticky",
                       top: 0,
@@ -2048,7 +2048,7 @@ const Usermanagement = (props) => {
                 <table class="table table-striped table-sm table-bordered">
                   <thead
                     style={{
-                      backgroundColor: "#294a69",
+                      backgroundColor: "#1C3B68",
                       color: "white",
                       position: "sticky",
                       top: 0,
@@ -2094,7 +2094,7 @@ const Usermanagement = (props) => {
                                 <i
                                   class="fa fa-eye"
                                   aria-hidden="true"
-                                  style={{ color: "#294a69" }}
+                                  style={{ color: "#1C3B68" }}
                                 ></i>
                               </a>
                             )}
@@ -2125,7 +2125,7 @@ const Usermanagement = (props) => {
                             <Button
                               variant="contained"
                               style={{
-                                backgroundColor: "#294a69",
+                                backgroundColor: "#1C3B68",
                                 transform: "scale(0.7)",
                               }}
                               onClick={() =>
@@ -2217,7 +2217,7 @@ const Usermanagement = (props) => {
           </Tabs>
         </div>
 
-        <AppBar position="fixed" sx={{ bgcolor: "#294a69" }}>
+        <AppBar position="fixed" sx={{ bgcolor: "#1C3B68" }}>
           <Toolbar>
             <Typography
               variant="h6"
@@ -2305,7 +2305,7 @@ const Usermanagement = (props) => {
           centered
         >
           <Modal.Header
-            style={{ color: "white", background: "#294A69", padding: "10px" }}
+            style={{ color: "white", background: "#1C3B68", padding: "10px" }}
             closeButton
           >
             <Modal.Title style={{ fontSize: "14px" }}>Edit Option</Modal.Title>
@@ -2386,7 +2386,7 @@ const Usermanagement = (props) => {
           <Modal.Footer>
             <Button
               variant="contained"
-              style={{ backgroundColor: "#294a69", textTransform: "none" }}
+              style={{ backgroundColor: "#1C3B68", textTransform: "none" }}
               onClick={updateHandler}
             >
               Update
@@ -2402,7 +2402,7 @@ const Usermanagement = (props) => {
           centered
         >
           <Modal.Header
-            style={{ color: "white", background: "#294A69", padding: "10px" }}
+            style={{ color: "white", background: "#1C3B68", padding: "10px" }}
             closeButton
           >
             <Modal.Title style={{ fontSize: "14px" }}>
@@ -2522,7 +2522,7 @@ const Usermanagement = (props) => {
             display: "flex",
             padding: "0 20px",
           }}
-          sx={{ bgcolor: "#294A69" }}
+          sx={{ bgcolor: "#1C3B68" }}
         >
           <div
             style={{

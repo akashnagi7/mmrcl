@@ -1,4 +1,3 @@
-
 /* The below code is a React component called "Contact". It is a part of a larger application and is
 responsible for rendering the contact page. */
 import React, { useState, useEffect } from "react";
@@ -66,7 +65,7 @@ export const Contact = () => {
 
   return (
     <>
-      <AppBar position="flex" sx={{ bgcolor: "#294a69" }}>
+      <AppBar position="flex" sx={{ bgcolor: "#1C3B68" }}>
         <Toolbar>
           <Typography variant="h6" noWrap component="div">
             <img src="./G_Ram_Logo.svg" alt="GRam Logo" height={"50hv"} />
@@ -199,7 +198,7 @@ export const Contact = () => {
           display: "flex",
           justifyContent: "flex-end",
         }}
-        sx={{ bgcolor: "#294A69" }}
+        sx={{ bgcolor: "#1C3B68" }}
       >
         <Typography variant="body1" color="inherit">
           <strong>

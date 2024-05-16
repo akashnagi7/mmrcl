@@ -221,9 +221,19 @@ export const Dashboard = ({ name, ...props }) => {
             <img
               src="./mmrclLogo.png"
               alt="GRam Logo"
-              height={"40px"}
+              height={"45px"}
               style={{
                 marginRight: "5px",
+                cursor: "pointer",
+              }}
+              onClick={handleHomeLogo}
+            />
+            <img
+              src="./zicaLogo.png"
+              alt="GRam Logo"
+              height={"32px"}
+              style={{
+                marginRight: "15px",
                 cursor: "pointer",
               }}
               onClick={handleHomeLogo}
@@ -293,56 +303,37 @@ export const Dashboard = ({ name, ...props }) => {
             }}
             onClick={handleGisMap}
           >
-            ABD UTILITY GIS SYSTEM
+            GIS SYSTEM
           </Button>
-          {/* <span
-            style={{
-              border: "1px solid white",
-              padding: "5px 10px",
-              cursor: "pointer",
-            }}
-            onClick={handleIncrement}
-          >
-            +
-          </span>
-          <span
-            style={{
-              border: "1px solid white",
-              padding: "5px 10px",
-              cursor: "pointer",
-            }}
-          >
-            A
-          </span>
-          <span
-            style={{
-              border: "1px solid white",
-              padding: "5px 10px",
-              cursor: "pointer",
-            }}
-            onClick={handleDecrement}
-          >
-            -
-          </span> */}
 
           {fname ? (
             <Button
-              color="inherit"
               onClick={handleLogout}
-              style={{ transform: `scale(${scale})` }}
+              style={{
+                transform: `scale(${scale})`,
+                backgroundColor: "#E30613",
+                padding: "12px",
+                paddingLeft: "32px",
+                paddingRight: "32px",
+                border: "none",
+                borderRadius: "30px",
+                fontFamily: "poppins, sans-serif",
+              }}
             >
               Logout
             </Button>
           ) : (
             <Button
-              color="inherit"
               onClick={handleLogin}
               style={{
                 transform: `scale(${scale})`,
-                backgroundColor: "#041133",
-                padding: "10px",
-                paddingLeft: "20px",
-                paddingRight: "20px",
+                backgroundColor: "#E30613",
+                padding: "12px",
+                paddingLeft: "32px",
+                paddingRight: "32px",
+                border: "none",
+                borderRadius: "30px",
+                fontFamily: "poppins, sans-serif",
               }}
             >
               Login
@@ -353,107 +344,118 @@ export const Dashboard = ({ name, ...props }) => {
 
       <Carousel fade style={{ padding: "25px" }}>
         <Carousel.Item interval={5000}>
-          <div style={{ height: "90vh", width: "100vw" }}>
+          <div style={{ height: "67vh", width: "100vw" }}>
             <img
               src={nashikOne}
               alt="First slide"
               style={{ height: "100%", width: "100%", objectFit: "cover" }}
             />
           </div>
-          <Carousel.Caption style={{ textAlign: "center", bottom: "220px" }}>
+          <Carousel.Caption style={{ textAlign: "center", bottom: "35px" }}>
             <h1
               style={{
-                fontSize: "46px",
+                fontSize: "40px",
               }}
             >
               The More Things Change,
             </h1>
-            <h1 style={{ fontSize: "46px" }}>The More They Remain The</h1>
-            <h1 style={{ fontSize: "46px", marginBottom: "40px" }}> Same</h1>
+            <h1 style={{ fontSize: "40px" }}>The More They Remain The</h1>
+            <h1 style={{ fontSize: "40px", marginBottom: "40px" }}> Same</h1>
             <span
               style={{
                 fontFamily: "Baskervville",
                 fontSize: "18px",
               }}
             >
-              The Mumbai Metro Line - 3 (MML -3) stands out as a pivotal
+              The Mumbai Metro Line - 11 (MML -11) stands out as a pivotal
             </span>
             <br></br>
             <span style={{ fontFamily: "Baskervville", fontSize: "18px" }}>
               intiative aimed at enhancing the tranportation landscape in
             </span>
             <br />
-            <span style={{ fontFamily: "Baskervville", fontSize: "18px" }}>
+            <span
+              style={{
+                fontFamily: "Baskervville",
+                fontSize: "18px",
+                paddingBottom: "10px",
+                marginBottom: "20px",
+                display: "block",
+              }}
+            >
               India's financial hub
             </span>
+
             <br></br>
             <Button
               variant="light"
               style={{ color: "black", margin: "10px", padding: "12px" }}
+              onClick={handleGisMap}
             >
               Explore GIS
             </Button>
           </Carousel.Caption>
         </Carousel.Item>
+
         <Carousel.Item interval={5000}>
-          <div style={{ height: "90vh", width: "100vw" }}>
+          <div style={{ height: "67vh", width: "100vw" }}>
             <img
               src={nashikTwo}
               alt="First slide"
               style={{ height: "100%", width: "100%", objectFit: "cover" }}
             />
           </div>
-          <Carousel.Caption style={{ textAlign: "center", bottom: "220px" }}>
+          <Carousel.Caption style={{ textAlign: "center", bottom: "35px" }}>
             <h1
               style={{
-                fontSize: "46px",
+                fontSize: "40px",
               }}
             >
               The More Things Change,
             </h1>
-            <h1 style={{ fontSize: "46px" }}>The More They Remain The</h1>
-            <h1 style={{ fontSize: "46px", marginBottom: "40px" }}> Same</h1>
+            <h1 style={{ fontSize: "40px" }}>The More They Remain The</h1>
+            <h1 style={{ fontSize: "40px", marginBottom: "40px" }}> Same</h1>
             <span
               style={{
                 fontFamily: "Baskervville",
                 fontSize: "18px",
               }}
             >
-              The Mumbai Metro Line - 3 (MML -3) stands out as a pivotal
+              The Mumbai Metro Line - 11 (MML -11) stands out as a pivotal
             </span>
             <br></br>
             <span style={{ fontFamily: "Baskervville", fontSize: "18px" }}>
               intiative aimed at enhancing the tranportation landscape in
             </span>
             <br />
-            <span style={{ fontFamily: "Baskervville", fontSize: "18px" }}>
+            <span
+              style={{
+                fontFamily: "Baskervville",
+                fontSize: "18px",
+                paddingBottom: "10px",
+                marginBottom: "20px",
+                display: "block",
+              }}
+            >
               India's financial hub
             </span>
-            <br></br>
+            <br />
+
             <Button
               variant="light"
               style={{ color: "black", margin: "10px", padding: "12px" }}
+              onClick={handleGisMap}
             >
               Explore GIS
             </Button>
           </Carousel.Caption>
         </Carousel.Item>
-        {/* <Carousel.Item interval={5000}>
-          <div style={{ height: "90vh", width: "100vw" }}>
-            <img
-              src={nashikThree}
-              alt="First slide"
-              style={{ height: "100%", width: "100%", objectFit: "cover" }}
-            />
-          </div>
-          <Carousel.Caption></Carousel.Caption>
-        </Carousel.Item> */}
       </Carousel>
 
       <>
-        <Button variant="primary" onClick={handleShow} className="me-2">
+        {/* <Button variant="primary" onClick={handleShow} className="me-2">
           {name}
-        </Button>
+        </Button> */}
         <Offcanvas show={show} onHide={handleClose} {...props} placement="end">
           <Offcanvas.Header closeButton style={{ background: "aliceblue" }}>
             <Offcanvas.Title style={{ color: "#284b69" }}>
@@ -642,47 +644,91 @@ export const Dashboard = ({ name, ...props }) => {
           </Offcanvas.Body>
         </Offcanvas>
       </>
-
-      {/* Footer Part */}
-      <AppBar
-        position="fixed"
-        style={{
-          top: "auto",
-          bottom: 0,
-          display: "flex",
-          padding: "0 20px",
-        }}
-        sx={{ bgcolor: "#294A69" }}
-      >
+      <div style={{ padding: "10px", background: "#014364" }}>
         <div
           style={{
             display: "flex",
+            justifyContent: "space-around",
+            backgroundColor: "#014364",
+            color: "white",
+            paddingTop: "5px",
             alignItems: "center",
-            justifyContent: "space-between",
-            fontFamily: "poppins, sans-serif",
+            borderBottom: "1px solid white",
+            fontSize: "small",
           }}
         >
-          <Typography
-            variant="body1"
-            color="inherit"
-            style={{ fontFamily: '"Poppins", sans-serif' }}
-          >
-            Copyright © 2023 NMSCDCL. All rights reserved
-          </Typography>
-          Visitor Count : {visitorCount}
-          <strong>
+          <span>
             <img
+              src="./mmrclLogo.png"
+              alt="GRam Logo"
+              height={"60px"}
               style={{
-                height: "18px",
-                margin: "5px",
-                paddingRight: "10px",
+                marginRight: "5px",
+                cursor: "pointer",
               }}
-              src="./BhugolGISlogo.png"
-              alt="BhugolGIS logo"
             />
-          </strong>
+          </span>
+          <div style={{ fontWeight: "600" }}>
+            <span style={{ marginRight: "20px" }}>ABOUT US</span>
+            <span style={{ marginRight: "20px" }}>CONTACT US</span>
+            <span style={{ marginRight: "20px" }}>FEEDBACK</span>
+            <span style={{ marginRight: "20px" }}>GIS SYSTEM</span>
+          </div>
+          <div>
+            <span style={{ marginRight: "10px" }}>
+              <img
+                src="./twitter.svg"
+                alt="Twitter Logo"
+                height={"40px"}
+                style={{
+                  marginRight: "5px",
+                  cursor: "pointer",
+                }}
+              />
+            </span>
+            <span style={{ marginRight: "10px" }}>
+              <img
+                src="./instagram.svg"
+                alt="Instagram Logo"
+                height={"40px"}
+                style={{
+                  marginRight: "5px",
+                  cursor: "pointer",
+                }}
+              />
+            </span>
+            <span style={{ marginRight: "10px" }}>
+              <img
+                src="./facebook.svg"
+                alt="Facebook Logo"
+                height={"40px"}
+                style={{
+                  marginRight: "5px",
+                  cursor: "pointer",
+                }}
+              />
+            </span>
+          </div>
         </div>
-      </AppBar>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-around",
+            backgroundColor: "#014364",
+            color: "white",
+            paddingTop: "9px",
+            alignItems: "center",
+            paddingBottom: "6px",
+            fontSize: "small",
+          }}
+        >
+          <div style={{ fontWeight: "600" }}>
+            <span style={{ marginRight: "20px" }}>
+              Copyright @ 2024 MMRCL GEOPORTAL | All Rights Reserved
+            </span>
+          </div>
+        </div>
+      </div>
     </>
   );
 };

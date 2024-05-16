@@ -239,7 +239,7 @@ const PrintGenerator = (report) => {
 
       <Modal show={show3} onHide={handleClose3} backdrop="static" centered>
         <Modal.Header
-          style={{ color: "white", background: "#294A69", padding: "10px" }}
+          style={{ color: "white", background: "#1C3B68", padding: "10px" }}
           closeButton
         >
           <Modal.Title style={{ fontSize: "14px" }}>Preview</Modal.Title>

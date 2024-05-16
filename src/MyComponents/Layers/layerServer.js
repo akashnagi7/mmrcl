@@ -5,7 +5,8 @@ can be imported and used in other parts of the codebase. */
 // const layerServer = "http://10.202.101.108:9022/geoserver/wms";
 // const layerServer = "http://10.202.100.7:9005/geoserver/wms";
 // const layerServer = "http://172.16.0.10:9005/geoserver/wms";
-const layerServer = "https://nashikgeoportal.com/geoserver/wms";
+// const layerServer = "https://nashikgeoportal.com/geoserver/wms";
+const layerServer = "http://10.202.100.7:9005/geoserver/wms";
 // const layerServer = "http://202.189.224.222:9060/geoserver/wms";
 // const layerServer = "http://192.168.1.136:8080/geoserver/wms";
 // const layerServer = "http://202.189.224.222:9022/geoserver/wms";

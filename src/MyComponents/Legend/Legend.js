@@ -32,7 +32,8 @@ function Legend(props) {
                 <img
                   // src={`http://10.202.100.7:9005/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH40=&HEIGHT=40&LAYER=${checkbox.vector_tile_params.LAYERS}`}
                   // src={`http://172.16.0.10:9005/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH40=&HEIGHT=40&LAYER=${checkbox.vector_tile_params.LAYERS}`}
-                  src={`https://nashikgeoportal.com/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH40=&HEIGHT=40&LAYER=${checkbox.vector_tile_params.LAYERS}`}
+                  // src={`https://nashikgeoportal.com/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH40=&HEIGHT=40&LAYER=${checkbox.vector_tile_params.LAYERS}`}
+                  src={`http://10.202.100.7:9005/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH40=&HEIGHT=40&LAYER=${checkbox.vector_tile_params.LAYERS}`}
                   // src={`http://202.189.224.222:9060/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH40=&HEIGHT=40&LAYER=${checkbox.vector_tile_params.LAYERS}`}
                   // src={`http://192.168.1.136:8080/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH40=&HEIGHT=40&LAYER=${checkbox.vector_tile_params.LAYERS}`}
                   // src={`http://202.189.224.222:9023/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH40=&HEIGHT=40&LAYER=${checkbox.vector_tile_params.LAYERS}`}
@@ -42,7 +43,8 @@ function Legend(props) {
                 {console.log(
                   // `http://10.202.100.7:9005/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH40=&HEIGHT=40&LAYER=${checkbox.vector_tile_params.LAYERS}`
                   // `http://172.16.0.10:9005/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH40=&HEIGHT=40&LAYER=${checkbox.vector_tile_params.LAYERS}`
-                  `https://nashikgeoportal.com/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH40=&HEIGHT=40&LAYER=${checkbox.vector_tile_params.LAYERS}`
+                  // `https://nashikgeoportal.com/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH40=&HEIGHT=40&LAYER=${checkbox.vector_tile_params.LAYERS}`
+                  `http://10.202.100.7:9005/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH40=&HEIGHT=40&LAYER=${checkbox.vector_tile_params.LAYERS}`
                   // `http://202.189.224.222:9060/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH40=&HEIGHT=40&LAYER=${checkbox.vector_tile_params.LAYERS}`
                   // `http://192.168.1.136:8080/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH40=&HEIGHT=40&LAYER=${checkbox.vector_tile_params.LAYERS}`
                 )}

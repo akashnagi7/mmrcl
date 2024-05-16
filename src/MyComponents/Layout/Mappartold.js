@@ -161,7 +161,8 @@ const Mappartold = (props) => {
       .get(
         // "http://10.202.100.7:9005/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=nmscdcl:garden&outputFormat=application/json&srsname=EPSG:3857"
         // "http://172.16.0.10:9005/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=nmscdcl:garden&outputFormat=application/json&srsname=EPSG:3857"
-        "https://nashikgeoportal.com/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=nmscdcl:garden&outputFormat=application/json&srsname=EPSG:3857"
+        // "https://nashikgeoportal.com/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=nmscdcl:garden&outputFormat=application/json&srsname=EPSG:3857"
+        "http://10.202.100.7:9005/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=nmscdcl:garden&outputFormat=application/json&srsname=EPSG:3857"
         // "http://202.189.224.222:9060/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=nmscdcl:garden&outputFormat=application/json&srsname=EPSG:3857"
         // "http://192.168.1.136:8080/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=nmscdcl:garden&outputFormat=application/json&srsname=EPSG:3857"
         // "http://202.189.224.222:9022/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=nmscdcl:garden&outputFormat=application/json&srsname=EPSG:3857"
@@ -458,7 +459,7 @@ const Mappartold = (props) => {
           >
             <div
               class="modal-header"
-              style={{ padding: "10px", background: "#294A69", color: "white" }}
+              style={{ padding: "10px", background: "#1C3B68", color: "white" }}
             >
               <h5 class="modal-title">{"Attribute Information"}</h5>
               <IconButton className="close" onClick={handleClose}>

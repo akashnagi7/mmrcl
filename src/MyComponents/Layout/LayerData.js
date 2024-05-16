@@ -380,9 +380,6 @@ const LayerData = (props) => {
 
   //handle success message for attribute editing
 
-
-
-
   if (loading) {
     return (
       <div class="d-flex justify-content-center">
@@ -395,7 +392,10 @@ const LayerData = (props) => {
 
   return (
     <>
-      <div className="font-layer nashiksmartcityfont">
+      <div
+        className="font-layer nashiksmartcityfont"
+        style={{ fontFamily: "poppins, sans-serif" }}
+      >
         {parentArray.map((parent, index) => {
           if (parent.name !== "Water Consumer survey") {
             return (
@@ -404,7 +404,35 @@ const LayerData = (props) => {
                   style={{ background: "transparent", border: "none" }}
                   onClick={() => handleParentChildToggle(index)}
                 >
-                  {parentChildVisibility[index] ? "-" : "+"}
+                  {parentChildVisibility[index] ? (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M18 15l-6-6-6 6"></path>
+                    </svg>
+                  ) : (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M6 9l6 6 6-6"></path>
+                    </svg>
+                  )}
                 </button>
                 <input
                   type="checkbox"
@@ -412,11 +440,12 @@ const LayerData = (props) => {
                   onChange={(event) =>
                     handleParentCheckboxChange(event, parent.id)
                   }
+                  style={{marginBottom:"10px"}}
                 />
                 &nbsp;
                 {parent.title}
                 {parentChildVisibility[index] && (
-                  <ul style={{ listStyleType: "none" }}>
+                  <ul style={{ listStyleType: "none"}}>
                     {parent.layer_set.map((childId) => {
                       const child = checkboxData.find((c) => c.id === childId);
                       const opacitychild = opacitycheckboxData.find(
@@ -531,7 +560,7 @@ const LayerData = (props) => {
         <Modal.Header
           style={{
             color: "white",
-            background: "#294a69",
+            background: "#1C3B68",
             padding: "9px",
           }}
           closeButton
@@ -548,7 +577,7 @@ const LayerData = (props) => {
                   {fields.map((field) => (
                     <th
                       style={{
-                        background: "#294a69",
+                        background: "#1C3B68",
                         color: "white",
                       }}
                       key={field}

@@ -13,8 +13,9 @@ const ZoomToExtentControl = () => {
 
     let ZoomToExtentControl = new ZoomToExtent({
       // extent: [8214851, 2277642, 8215510, 2268762],
-      extent: [8215251, 2275652, 8215300, 2270762],
-      // extent: [8209198, 2272007, 8217733, 2276018],
+      // extent: [8215251, 2275652, 8215300, 2270762],
+      extent: [8119900, 2145007, 8115533, 2173018],
+
     });
 
     map.controls.push(ZoomToExtentControl);

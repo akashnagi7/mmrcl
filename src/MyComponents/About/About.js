@@ -77,7 +77,7 @@ export const About = ({ name, ...props }) => {
 
   return (
     <>
-      <AppBar position="flex" sx={{ bgcolor: "#294a69" }}>
+      <AppBar position="flex" sx={{ bgcolor: "#1C3B68" }}>
         <Toolbar>
           <Typography
             variant="h6"
@@ -439,7 +439,7 @@ export const About = ({ name, ...props }) => {
           display: "flex",
           padding: "0 20px",
         }}
-        sx={{ bgcolor: "#294A69" }}
+        sx={{ bgcolor: "#1C3B68" }}
       >
         <div
           style={{

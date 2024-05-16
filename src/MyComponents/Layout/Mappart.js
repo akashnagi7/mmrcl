@@ -193,7 +193,8 @@ const Mappart = (props) => {
       .get(
         // "http://10.202.100.7:9005/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=nmscdcl:garden&outputFormat=application/json&srsname=EPSG:3857"
         // "http://172.16.0.10:9005/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=nmscdcl:garden&outputFormat=application/json&srsname=EPSG:3857"
-        "https://nashikgeoportal.com/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=nmscdcl:garden&outputFormat=application/json&srsname=EPSG:3857"
+        // "https://nashikgeoportal.com/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=nmscdcl:garden&outputFormat=application/json&srsname=EPSG:3857"
+        "http://10.202.100.7:9005/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=nmscdcl:garden&outputFormat=application/json&srsname=EPSG:3857"
         // "http://202.189.224.222:9060/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=nmscdcl:garden&outputFormat=application/json&srsname=EPSG:3857"
         // "http://192.168.1.136:8080/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=nmscdcl:garden&outputFormat=application/json&srsname=EPSG:3857"
         // "http://202.189.224.222:9022/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=nmscdcl:garden&outputFormat=application/json&srsname=EPSG:3857"
@@ -203,7 +204,13 @@ const Mappart = (props) => {
       .then((res) => {
         //  console.log(res.data.features[0].properties);
       });
-  }, [props.nonSpatialData, geojson, props.spQuery, props.myvectoredittoggle, props.predefinedQuery]);
+  }, [
+    props.nonSpatialData,
+    geojson,
+    props.spQuery,
+    props.myvectoredittoggle,
+    props.predefinedQuery,
+  ]);
   const [keys, SetKeys] = useState();
   const [values, SetValues] = useState();
   const handleDataFromChild = (data) => {
@@ -247,7 +254,9 @@ const Mappart = (props) => {
                 <TileLayer
                   source={
                     new XYZ({
-                      url: "https://mt0.google.com/vt/lyrs=s,h&hl=en&x={x}&y={y}&z={z}",
+                      // url: "https://mt0.google.com/vt/lyrs=s,h&hl=en&x={x}&y={y}&z={z}",
+                      // url: "https://mt0.google.com/vt/lyrs=p&hl=en&x={x}&y={y}&z={z}",
+                      url: "https://mt0.google.com/vt/lyrs=r&hl=en&x={x}&y={y}&z={z}",
                     })
                   }
                   zIndex={0}
@@ -927,7 +936,7 @@ const Mappart = (props) => {
                 class="modal-header"
                 style={{
                   padding: "10px",
-                  background: "#294A69",
+                  background: "#1C3B68",
                   color: "white",
                 }}
               >
@@ -1080,7 +1089,7 @@ const mapStateToProps = (state) => {
     nonSpatialQueryLayer: state.nonSpatialQueryLayer,
     spQuery: state.spQuery,
     myupdateVectorLayer: state.updatevectorlayer,
-    predefinedQuery : state.predefinedQuery
+    predefinedQuery: state.predefinedQuery,
   };
 };
 

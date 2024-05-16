@@ -519,7 +519,7 @@ const LayerData = (props) => {
         style={{ fontFamily: "poppins, sans-serif" }}
       >
         <Modal.Header
-          style={{ color: "white", background: "#294A69", padding: "9px" }}
+          style={{ color: "white", background: "#1C3B68", padding: "9px" }}
           closeButton
         >
           <Modal.Title style={{ fontSize: "14px" }}>
@@ -534,7 +534,7 @@ const LayerData = (props) => {
                   {fields.map((field) => (
                     <th
                       style={{
-                        background: "#294a69",
+                        background: "#1C3B68",
                         color: "white",
                       }}
                       key={field}

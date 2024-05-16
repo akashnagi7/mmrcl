@@ -72,7 +72,7 @@ export const Login = (props) => {
                   <div className="col-lg-6">
                     <div className="card-body p-md-5 mx-md-4">
                       <div className="text-center">
-                        <img
+                        {/* <img
                           src="./nashik_smart_city_logo.jpg"
                           className="smart-city"
                           alt="nashik pie logo with text"
@@ -82,24 +82,26 @@ export const Login = (props) => {
                             cursor: "pointer",
                           }}
                           onClick={handleSmartLogo}
-                        />
+                        /> */}
                         <img
-                          src="G_Ram_Logo.svg"
+                          src="mmrclLogo.svg"
                           className="g-ramgis"
                           alt="g-ram logo"
                         />
 
                         <h4
                           className="mt-1 mb-5 pb-1"
-                          style={{ color: "#284b69" }}
+                          style={{ color: "rgb(4, 17, 51)" }}
                         >
-                          G-RAM GIS
+                          MMRCL GEOPORTAL
                         </h4>
                       </div>
 
                       <form onSubmit={handleForgotPassword}>
-                        <h4>Forgot Your Password ?</h4>
-                        <p>
+                        <h4 style={{ color: "#202020" }}>
+                          Forgot Your Password ?
+                        </h4>
+                        <p style={{ color: "#202020", fontSize: "13px" }}>
                           Enter your username or email id and we will send you
                           instructions to reset your password on your email id
                         </p>
@@ -127,7 +129,10 @@ export const Login = (props) => {
                           <button
                             className="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3"
                             type="submit"
-                            style={{ background: "#284b69", border: "none" }}
+                            style={{
+                              background: "rgb(4, 17, 51)",
+                              border: "none",
+                            }}
                           >
                             Forgot Password
                           </button>
@@ -137,10 +142,10 @@ export const Login = (props) => {
                   </div>
                   <div
                     className="col-lg-6 d-flex align-items-center gradient-custom-2"
-                    style={{ background: "#284b69" }}
+                    style={{ background: "rgb(4, 17, 51)" }}
                   >
                     <img
-                      src="nms.jpg"
+                      src="mumbaiCityLogo.png"
                       className="nashik-image"
                       alt="nashikImage"
                     />

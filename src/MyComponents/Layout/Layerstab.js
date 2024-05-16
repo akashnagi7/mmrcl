@@ -19,6 +19,7 @@ import Box from "@mui/material/Box";
 import LayerData from "./LayerData";
 import { Tooltip } from "@mui/material";
 import WaterData from "./WaterData";
+import "./LayerData.css";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -66,8 +67,8 @@ export default function Layerstab() {
   };
 
   return (
-    <Box sx={{ bgcolor: "background.paper", width: "auto" }}>
-      <AppBar position="static" sx={{ bgcolor: "#294A69" }}>
+    <Box sx={{ bgcolor: "background.paper", width: "auto", padding: "0px" }}>
+      {/* <AppBar position="static" sx={{ bgcolor: "#1C3B68" }}>
         <Tabs
           value={value}
           onChange={handleChange}
@@ -105,13 +106,19 @@ export default function Layerstab() {
             {...a11yProps(1)}
           />
         </Tabs>
-      </AppBar>
+      </AppBar> */}
       <SwipeableViews
         axis={theme.direction === "rtl" ? "x-reverse" : "x"}
         index={value}
         onChangeIndex={handleChangeIndex}
+        style={{ padding: "0px" }}
       >
-        <TabPanel value={value} index={0} dir={theme.direction}>
+        <TabPanel
+          value={value}
+          index={0}
+          dir={theme.direction}
+
+        >
           <LayerData />
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
