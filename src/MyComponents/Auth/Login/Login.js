@@ -257,7 +257,7 @@ export const Login = (props) => {
               }}
             >
               <div className="card-body">
-                <form>
+                <form onSubmit={handleSubmit}>
                   <h5 className="mb-4" style={{ paddingTop: "20px" }}>
                     Login to your account
                   </h5>
@@ -267,17 +267,19 @@ export const Login = (props) => {
                       className="form-label"
                       style={{ fontWeight: "400" }}
                     >
-                      Email
+                      Username
                     </label>
+
                     <input
                       type="text"
                       className="form-control"
-                      id="username"
-                      placeholder="Enter Email"
+                      id="form2Example11"
+                      placeholder="Enter Username"
+                      onChange={(event) => setUserName(event.target.value)}
                       style={{ fontSize: "small" }}
                     />
                   </div>
-                  <div className="mb-4">
+                  <div className="mb-2">
                     <div
                       style={{
                         display: "flex",
@@ -293,19 +295,35 @@ export const Login = (props) => {
                       >
                         Password
                       </label>
-                      <span style={{ cursor: "pointer", color: "#1570EF" }}>
-                        Forgot ?
-                      </span>
                     </div>
 
                     <input
                       type="password"
                       className="form-control"
                       id="password"
-                      placeholder="Enter your password"
+                      placeholder="Enter Password"
+                      onChange={(event) => setPassword(event.target.value)}
                       style={{ fontSize: "small" }}
                     />
                   </div>
+                  <div className="mb-1">
+                    <div
+                      style={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        alignItems: "center",
+                        paddingBottom: "10px",
+                      }}
+                    >
+                      <span
+                        style={{ cursor: "pointer", color: "#1570EF" }}
+                        onClick={handleForgotPassword}
+                      >
+                        Forgot Password ?
+                      </span>
+                    </div>
+                  </div>
+
                   <div className="text-center">
                     <button
                       type="submit"
@@ -333,7 +351,7 @@ export const Login = (props) => {
           <div
             style={{
               flex: 1,
-              backgroundColor: "#1C3B68",
+              backgroundColor: "#014364",
               backgroundSize: "cover",
               backgroundPosition: "center",
               position: "relative", // Set position to relative to allow absolute positioning of text
@@ -341,23 +359,21 @@ export const Login = (props) => {
           >
             <div
               style={{
-                position: "absolute", // Position the text absolutely within the parent div
-                top: "40%", // Adjust top position as needed
-                left: "20%", // Center the text horizontally
-                transform: "translateX(-14%)", // Center the text horizontally
-                color: "white", // Text color
+                position: "absolute",
+                top: "68%",
+                left: "20%",
+                transform: "translateX(-14%)",
+                color: "white",
               }}
             >
               <h5>
-                Welcome to <b>MMRCL</b>
+                Welcome to <b>Geo-portal Line 11</b>
               </h5>
               <p style={{ fontSize: "12px" }}>
-                Welcome to our platform! We're here to support Metro Line 11's
-                development by offering tailored GIS data and analytics for the
-                MMRCL. With our user-friendly tools, stakeholders can make
-                informed decisions and ensure accountability. Explore our
-                detailed map and dashboards to shape Mumbai's transportation
-                future.
+                Join us to boost Metro Line 11's growth! Our platform offers
+                customized Geospatial data and easy tools for informed
+                decisions. Dive into our maps and dashboards to shape Mumbai's
+                transit future.
               </p>
             </div>
             <img
@@ -378,7 +394,7 @@ export const Login = (props) => {
         <div
           style={{
             flex: 1,
-            backgroundColor: "#1C3B68",
+            backgroundColor: "#014364",
           }}
         ></div>
       </div>

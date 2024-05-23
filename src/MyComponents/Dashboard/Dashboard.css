@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+/* .container img {
+  width: 100px;
+  margin: 0 10px;
+} */
+/* .container img:first-child {
+  margin-left: 5px;
+}
+.container img:last-child {
+  margin-right: 5px;
+} */
+
+.custom-modal-size {
+  max-width: 25% !important; /* Set the desired width */
+  width: 25% !important; /* Ensure width takes effect */
+}

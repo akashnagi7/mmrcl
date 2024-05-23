@@ -42,8 +42,8 @@ import VectorLayersM from "./Drawgeometry/VectorLayersM";
 import VectorLayersDraw from "./Drawgeometry/VectorLayersDraw";
 
 const Mappart = (props) => {
-  const [center, setCenter] = useState([73.789803, 19.997454]);
-  const [zoom, setZoom] = useState(16);
+  const [center, setCenter] = useState([72.970823, 19.081212]);
+  const [zoom, setZoom] = useState(11);
   const [dialogopen, setDialogOpen] = React.useState(false);
 
   const [isChecked, setIsChecked] = useState(false);

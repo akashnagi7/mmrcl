@@ -12,7 +12,7 @@ const ProjectionBar = () => {
         justifyContent: "center",
         alignItems: "center", // Add this line to center vertically
         position: "absolute",
-        top: "95.5%",
+        top: "92.5%",
         left: "82%",
         transform: "translate(-50%, -50%)", // Center horizontally and vertically
         background: "white",

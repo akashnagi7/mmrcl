@@ -117,7 +117,7 @@ export default function Layerstab() {
           value={value}
           index={0}
           dir={theme.direction}
-
+          style={{ borderTop: "1px solid #CCCCCC", paddingTop: "12px" }}
         >
           <LayerData />
         </TabPanel>

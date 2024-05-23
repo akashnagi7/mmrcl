@@ -8,15 +8,26 @@ import { styled, useTheme } from "@mui/material/styles";
 import Toolbar from "@mui/material/Toolbar";
 import Button from "react-bootstrap/Button";
 import nashikOne from "../Dashboard/nashikOne.png";
+import nashikOneLeft from "../Dashboard/leftSide.png";
+import nashikOneRight from "../Dashboard/rightSide.png";
 import nashikTwo from "../Dashboard/nashikTwo.png";
 import nashikThree from "../Dashboard/nashikthree.svg";
 // import nashikFour from "../Dashboard/nashikfour.svg";
-import Form from "react-bootstrap/Form";
+import { Form, Row, Col, InputGroup } from "react-bootstrap";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import counterData from "../Counter/counter.json";
 import axios from "axios";
 import Swal from "sweetalert2";
-
+import "./Dashboard.css";
+import Modal from "react-bootstrap/Modal";
+import formfullName from "../Dashboard/formFullName.svg";
+import formEmail from "../Dashboard/formEmail.svg";
+import formPhoneNumber from "../Dashboard/formPhone.svg";
+import twitterContact from "../Dashboard/twitterContact.svg";
+import instagramContact from "../Dashboard/instagramContact.svg";
+import facebookContact from "../Dashboard/facebookContact.svg";
+import leftSideArrow from "../Dashboard/leftSideArrow.svg";
+import rightSideArrow from "../Dashboard/rightSideArrow.svg";
 // Header Material Component
 const drawerWidth = 200;
 const AppBar = styled(MuiAppBar, {
@@ -93,7 +104,7 @@ export const Dashboard = ({ name, ...props }) => {
 
   function handleContactUs() {
     console.log("handleContactUs");
-    window.location.replace("/contact");
+    // window.location.replace("/contact");
   }
 
   function handleGramLogoClick() {
@@ -101,16 +112,20 @@ export const Dashboard = ({ name, ...props }) => {
     window.location.replace("/dashboard");
   }
 
-  // Handle Contact Us Part
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
   // Handle Feedback Part
-  const [showFeedback, setShowFeedback] = useState(false);
-  const handleCloseFeedback = () => setShowFeedback(false);
-  const handleShowFeedback = () => setShowFeedback(true);
+  // const [showFeedback, setShowFeedback] = useState(false);
+  // const handleCloseFeedback = () => setShowFeedback(false);
+  // const handleShowFeedback = () => setShowFeedback(true);
+
+  //Handle Contact us Part
+  const [showContact, setShowContact] = useState(false);
+  const handleCloseContact = () => setShowContact(false);
+  const handleShowContact = () => setShowContact(true);
 
   const [fullname, setFullName] = useState();
   const handleFullNameChange = (event) => {
@@ -265,7 +280,7 @@ export const Dashboard = ({ name, ...props }) => {
               fontFamily: "poppins, sans-serif",
               fontWeight: "600",
             }}
-            onClick={handleAboutUs}
+            // onClick={handleAboutUs}
           >
             ABOUT US
           </Button>
@@ -277,7 +292,7 @@ export const Dashboard = ({ name, ...props }) => {
               fontFamily: "poppins, sans-serif",
               fontWeight: "600",
             }}
-            onClick={handleShow}
+            onClick={handleShowContact}
           >
             CONTACT US
           </Button>
@@ -289,7 +304,7 @@ export const Dashboard = ({ name, ...props }) => {
               fontFamily: "poppins, sans-serif",
               fontWeight: "600",
             }}
-            onClick={handleShowFeedback}
+            onClick={handleShow}
           >
             FEEDBACK
           </Button>
@@ -341,8 +356,135 @@ export const Dashboard = ({ name, ...props }) => {
           )}
         </Toolbar>
       </AppBar>
+      <div style={{ position: "relative", width: "100%" }}>
+        <img
+          src={nashikOneLeft}
+          alt="Image 1"
+          style={{ height: "605px", marginTop: "3.6vh" }}
+        />
 
-      <Carousel fade style={{ padding: "25px" }}>
+        <div
+          style={{
+            display: "inline-block",
+            verticalAlign: "top",
+            width: "91%", // Adjust the width to fit the middle image and leave space for the right image
+          }}
+        >
+          <div
+            style={{
+              position: "relative",
+            }}
+          >
+            <img
+              src={nashikOne}
+              alt="Image 2"
+              style={{
+                height: "662px",
+                width: "100%",
+                padding: "18px",
+                objectFit: "cover",
+                borderRadius: "22px",
+                borderRadius: "40px",
+              }}
+            />
+            <div
+              style={{
+                position: "absolute",
+                top: "50%",
+                left: "50%",
+                transform: "translate(-50%, -50%)",
+                color: "white",
+                textAlign: "center",
+              }}
+            >
+              <span
+                style={{
+                  fontSize: "40px",
+                  fontWeight: "500",
+                  fontFamily: "poppins, sans-serif",
+                }}
+              >
+                Integrated Map Data
+              </span>
+              <br />
+              <span style={{ textAlign: "center", display: "flex" }}>
+                Explore all you need on one map. Find trees, buildings,
+                <br />
+                roads, and other details crucial for Metro Line 11's progress.
+              </span>
+              <Button
+                style={{
+                  transform: `scale(${scale})`,
+                  backgroundColor: "white",
+                  padding: "18px",
+                  paddingLeft: "28px",
+                  paddingRight: "28px",
+                  border: "none",
+                  borderRadius: "30px",
+                  fontFamily: "poppins, sans-serif",
+                  color: "black",
+                  marginTop: "35px",
+                }}
+                onClick={handleGisMap}
+              >
+                Explore GIS
+              </Button>
+            </div>
+            <div
+              style={{
+                position: "absolute",
+                bottom: "30px",
+                left: "50%",
+                transform: "translateX(-50%)",
+                color: "white",
+                textAlign: "center",
+              }}
+            >
+              <span
+                style={{
+                  fontSize: "12px",
+                  fontWeight: "400",
+                  fontFamily: "poppins, sans-serif",
+                }}
+              >
+                <img
+                  src={leftSideArrow}
+                  alt="leftSideArrow"
+                  style={{
+                    marginRight: "15px",
+                    cursor: "pointer",
+                    height: "22px",
+                  }}
+                />
+                1 of 2
+                <img
+                  src={rightSideArrow}
+                  alt="rightSideArrow"
+                  style={{ marginLeft: "15px", cursor: "pointer" }}
+                />
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <img
+          src={nashikOneRight}
+          alt="Image 3"
+          style={{
+            height: "605px",
+            width: "4.6%",
+            position: "absolute",
+            top: "0",
+            right: "0",
+            marginTop: "3.6vh",
+          }}
+        />
+      </div>
+
+      {/* <Carousel
+        fade
+        style={{ padding: "20px" }}
+      >
         <Carousel.Item interval={5000}>
           <div style={{ height: "67vh", width: "100vw" }}>
             <img
@@ -351,45 +493,59 @@ export const Dashboard = ({ name, ...props }) => {
               style={{ height: "100%", width: "100%", objectFit: "cover" }}
             />
           </div>
-          <Carousel.Caption style={{ textAlign: "center", bottom: "35px" }}>
+          <Carousel.Caption
+            style={{
+              textAlign: "center",
+              bottom: "35px",
+              fontFamily: "poppins,sans-serif",
+            }}
+          >
             <h1
               style={{
-                fontSize: "40px",
+                fontSize: "35px",
+                fontFamily: "poppins,sans-serif",
               }}
             >
-              The More Things Change,
+              Integrated Map Data
             </h1>
-            <h1 style={{ fontSize: "40px" }}>The More They Remain The</h1>
-            <h1 style={{ fontSize: "40px", marginBottom: "40px" }}> Same</h1>
-            <span
+
+            <h1 style={{ fontSize: "40px", marginBottom: "40px" }}> </h1>
+            <span0
               style={{
-                fontFamily: "Baskervville",
+                fontFamily: "poppins,sans-serif",
                 fontSize: "18px",
               }}
             >
-              The Mumbai Metro Line - 11 (MML -11) stands out as a pivotal
-            </span>
+              Explore all you need on one map. Find trees, buildings,
+            </span0>
             <br></br>
-            <span style={{ fontFamily: "Baskervville", fontSize: "18px" }}>
-              intiative aimed at enhancing the tranportation landscape in
+            <span
+              style={{ fontFamily: "poppins,sans-serif", fontSize: "18px" }}
+            >
+              roads, and other details crucial for Metro Line 11's progress.
             </span>
             <br />
             <span
               style={{
-                fontFamily: "Baskervville",
+                fontFamily: "poppins,sans-serif",
                 fontSize: "18px",
                 paddingBottom: "10px",
                 marginBottom: "20px",
                 display: "block",
               }}
             >
-              India's financial hub
+
             </span>
 
             <br></br>
             <Button
               variant="light"
-              style={{ color: "black", margin: "10px", padding: "12px" }}
+              style={{
+                color: "black",
+                margin: "10px",
+                padding: "14px",
+                borderRadius: "25px",
+              }}
               onClick={handleGisMap}
             >
               Explore GIS
@@ -450,96 +606,10 @@ export const Dashboard = ({ name, ...props }) => {
             </Button>
           </Carousel.Caption>
         </Carousel.Item>
-      </Carousel>
+      </Carousel> */}
 
       <>
-        {/* <Button variant="primary" onClick={handleShow} className="me-2">
-          {name}
-        </Button> */}
-        <Offcanvas show={show} onHide={handleClose} {...props} placement="end">
-          <Offcanvas.Header closeButton style={{ background: "aliceblue" }}>
-            <Offcanvas.Title style={{ color: "#284b69" }}>
-              <h4>Contact us</h4>
-            </Offcanvas.Title>
-          </Offcanvas.Header>
-          <Offcanvas.Body
-            style={{
-              color: "#284b69",
-              fontWeight: "490",
-              background: "aliceblue",
-            }}
-          >
-            <div>
-              <span style={{ marginBottom: "10px" }}>
-                Nashik Municipal Smart City Development Corporation Limited
-                <br></br>
-              </span>
-              <br />
-              <br />
-              <span style={{ marginBottom: "10px" }}>
-                CIN: U93090MH2016SGC285193
-              </span>
-              <br />
-              <br />
-              <span style={{ marginBottom: "10px" }}>
-                <b>Registered Office Address:</b> <br></br>C\O Nashik Municipal
-                Corporation, Rajiv Gandhi Bhavan, Purandare Colony, Sharanpur,
-                Nashik – 422002
-              </span>
-              <br />
-              <br />
-              <span style={{ marginBottom: "10px" }}>
-                <b>Office Address:</b>
-                <br></br> Loknete Panditrao Khaire Panchavati Divisional Office
-                4th - Floor Makhmalabad Naka Panchavati, Nashik 422003
-                <br></br>
-                <img
-                  src="./telephone.png"
-                  alt="GRam Logo"
-                  height={"30hv"}
-                  style={{ marginRight: "10px" }}
-                />
-                Telephone Number: 0253 2518863
-              </span>
-              <br></br>
-              <br></br>
-              <span style={{ display: "flex", justifyContent: "center" }}>
-                <a
-                  href="https://www.facebook.com/NashikSmartCityOfficial/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src="./facebook.png"
-                    alt="GRam Logo"
-                    height={"50hv"}
-                    style={{ marginRight: "10px" }}
-                  />
-                </a>
-                <a
-                  href="https://twitter.com/NashikSmartCity"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src="./twitter.png"
-                    alt="GRam Logo"
-                    height={"50hv"}
-                    style={{ marginRight: "10px" }}
-                  />
-                </a>
-                <a
-                  href="https://www.instagram.com/nashik_smart_city"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img src="./instagram.png" alt="GRam Logo" height={"52hv"} />
-                </a>
-              </span>
-            </div>
-          </Offcanvas.Body>
-        </Offcanvas>
-        <Offcanvas
+        {/* <Offcanvas
           show={showFeedback}
           onHide={handleCloseFeedback}
           {...props}
@@ -642,7 +712,282 @@ export const Dashboard = ({ name, ...props }) => {
               </Button>
             </Form>
           </Offcanvas.Body>
-        </Offcanvas>
+        </Offcanvas> */}
+
+        <>
+          <Modal
+            show={showContact}
+            onHide={handleCloseContact}
+            centered
+            style={{ fontFamily: "poppins,sans-serif" }}
+            dialogClassName="custom-modal-size"
+          >
+            <Modal.Header closeButton style={{ border: "none" }}>
+              <Modal.Title>
+                <h4>Contact Us</h4>
+              </Modal.Title>
+            </Modal.Header>
+            <Modal.Body
+              style={{ fontFamily: "poppins,sans-serif", paddingTop: "0px" }}
+            >
+              <span
+                style={{
+                  fontSize: "14px",
+                  display: "block",
+                  marginBottom: "10px",
+                }}
+              >
+                For inquiries or feedback, please don't hesitate to<br></br>{" "}
+                reach out to us at
+              </span>
+              <span
+                style={{
+                  fontSize: "14px",
+                  display: "block",
+                  marginBottom: "10px",
+                }}
+              >
+                <b>Email:</b> contact@mmrcl.com.
+              </span>
+              <span
+                style={{
+                  fontSize: "14px",
+                  display: "block",
+                  marginBottom: "10px",
+                }}
+              >
+                <b>Address:</b>
+              </span>
+              <span
+                style={{
+                  fontSize: "14px",
+                  display: "block",
+                  marginBottom: "10px",
+                }}
+              >
+                Mumbai Metro Rail Corporation Limited,<br></br> 202, 2nd Floor
+                and 801 & 803, 8th Floor,<br></br> Hallmark Business Plaza,{" "}
+                <br></br>Opp. Gurunanak Hospital,
+                <br /> Sant Dnyaneshwar Marg,<br></br> Bandra (East), Mumbai -
+                400 051.
+              </span>
+              <span
+                style={{
+                  fontSize: "14px",
+                  display: "flex",
+                  justifyContent: "center",
+                  marginBottom: "10px",
+                }}
+              >
+                <a
+                  href="https://x.com/mumbaimetro3?lang=en"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src={twitterContact}
+                    alt="twitter Contact"
+                    style={{ marginRight: "10px" }}
+                  />
+                </a>
+
+                <img
+                  src={instagramContact}
+                  alt="instagram Contact"
+                  style={{ marginRight: "10px" }}
+                ></img>
+                <a
+                  href="https://www.facebook.com/mmrcmumbai/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ marginRight: "10px" }}
+                >
+                  <img src={facebookContact} alt="instagram Contact"></img>
+                </a>
+              </span>
+            </Modal.Body>
+          </Modal>
+          <Modal show={show} onHide={handleClose} centered>
+            <Modal.Header closeButton style={{ border: "none" }}>
+              <Modal.Title style={{ fontFamily: "poppins,sans-serif" }}>
+                Feedback
+              </Modal.Title>
+            </Modal.Header>
+            <Modal.Body
+              style={{ fontFamily: "poppins,sans-serif", paddingTop: "0px" }}
+            >
+              <span
+                style={{
+                  color: "#6F6C90",
+                  fontFamily: "poppins,sans-serif",
+                  fontSize: "14px",
+                  display: "block",
+                  marginBottom: "10px",
+                }}
+              >
+                Please provide your valuable feedback here to help us understand
+                and improve user experience.
+              </span>
+              <Form className="mb-2">
+                <Row>
+                  <Col md={6}>
+                    <Form.Group
+                      className="mb-4"
+                      style={{ position: "relative" }}
+                    >
+                      <Form.Label style={{ fontWeight: "500" }}>
+                        Name
+                      </Form.Label>
+                      <div style={{ position: "relative" }}>
+                        <Form.Control
+                          type="text"
+                          placeholder="Full Name"
+                          value={fullname}
+                          onChange={handleFullNameChange}
+                          style={{
+                            borderRadius: "22px",
+                            boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px",
+                            paddingRight: "30px",
+                          }}
+                        />
+                        <img
+                          src={formfullName}
+                          alt="Full Name"
+                          style={{
+                            position: "absolute",
+                            right: "10px",
+                            top: "50%",
+                            transform: "translateY(-50%)",
+                            height: "16px",
+                            width: "16px",
+                          }}
+                        />
+                      </div>
+                    </Form.Group>
+                  </Col>
+
+                  <Col md={6}>
+                    <Form.Group className="mb-4">
+                      <Form.Label style={{ fontWeight: "500" }}>
+                        Email
+                      </Form.Label>
+                      <div style={{ position: "relative" }}>
+                        <Form.Control
+                          type="email"
+                          placeholder="Email address"
+                          value={email}
+                          onChange={handleEmailChange}
+                          style={{
+                            borderRadius: "22px",
+                            boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px",
+                            paddingRight: "30px",
+                          }}
+                        />
+                        <img
+                          src={formEmail}
+                          alt="Email"
+                          style={{
+                            position: "absolute",
+                            right: "10px",
+                            top: "50%",
+                            transform: "translateY(-50%)",
+                            height: "16px",
+                            width: "16px",
+                          }}
+                        />
+                      </div>
+                    </Form.Group>
+                  </Col>
+                </Row>
+
+                <Row>
+                  <Col md={6}>
+                    <Form.Group className="mb-4">
+                      <Form.Label style={{ fontWeight: "500" }}>
+                        Phone Number
+                      </Form.Label>
+                      <div style={{ position: "relative" }}>
+                        <Form.Control
+                          type="number"
+                          placeholder="Enter Phone Number"
+                          value={phoneNumber}
+                          onChange={handlePhoneNumberChange}
+                          style={{
+                            borderRadius: "22px",
+                            boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px",
+                            paddingRight: "30px",
+                          }}
+                        />
+                        <img
+                          src={formPhoneNumber}
+                          alt="Phone Number"
+                          style={{
+                            position: "absolute",
+                            right: "10px",
+                            top: "50%",
+                            transform: "translateY(-50%)",
+                            height: "16px",
+                            width: "16px",
+                          }}
+                        />
+                      </div>
+                    </Form.Group>
+                  </Col>
+
+                  <Col md={6}>
+                    <Form.Group className="mb-4">
+                      <Form.Label style={{ fontWeight: "500" }}>
+                        File
+                      </Form.Label>
+                      <Form.Control
+                        type="file"
+                        onChange={handleFileFeedbackChange}
+                        style={{
+                          borderRadius: "22px",
+                          boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px",
+                        }}
+                      />
+                    </Form.Group>
+                  </Col>
+                </Row>
+
+                <Form.Group className="mb-4">
+                  <Form.Label style={{ fontWeight: "500" }}>
+                    Feedback
+                  </Form.Label>
+                  <Form.Control
+                    as="textarea"
+                    placeholder="Enter Feedback..."
+                    value={comments}
+                    onChange={handleCommentsChange}
+                    style={{
+                      borderRadius: "22px",
+                      boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px",
+                      height: "100px",
+                    }}
+                  />
+                </Form.Group>
+
+                <Button
+                  variant="primary"
+                  type="submit"
+                  style={{
+                    background: "#E30613",
+                    color: "#fff",
+                    border: "none",
+                    borderRadius: "22px",
+                    padding: "10px",
+                    paddingLeft: "15px",
+                    paddingRight: "15px",
+                  }}
+                  onClick={handleSubmit}
+                >
+                  Submit Feedback
+                </Button>
+              </Form>
+            </Modal.Body>
+          </Modal>
+        </>
       </>
       <div style={{ padding: "10px", background: "#014364" }}>
         <div
@@ -659,6 +1004,15 @@ export const Dashboard = ({ name, ...props }) => {
         >
           <span>
             <img
+              src="./BhugolGISlogo.png"
+              alt="GRam Logo"
+              height={"25px"}
+              style={{
+                marginRight: "5px",
+                cursor: "pointer",
+              }}
+            />
+            <img
               src="./mmrclLogo.png"
               alt="GRam Logo"
               height={"60px"}
@@ -668,23 +1022,39 @@ export const Dashboard = ({ name, ...props }) => {
               }}
             />
           </span>
-          <div style={{ fontWeight: "600" }}>
-            <span style={{ marginRight: "20px" }}>ABOUT US</span>
-            <span style={{ marginRight: "20px" }}>CONTACT US</span>
-            <span style={{ marginRight: "20px" }}>FEEDBACK</span>
-            <span style={{ marginRight: "20px" }}>GIS SYSTEM</span>
+          <div style={{ fontWeight: "600", fontFamily: "poppins,sans-serif" }}>
+            <span style={{ marginRight: "25px" }}>ABOUT US</span>
+            <span
+              style={{ marginRight: "25px", cursor: "pointer" }}
+              onClick={handleShowContact}
+            >
+              CONTACT US
+            </span>
+            <span
+              style={{ marginRight: "25px", cursor: "pointer" }}
+              onClick={handleShow}
+            >
+              FEEDBACK
+            </span>
+            <span style={{ marginRight: "25px" }}>GIS SYSTEM</span>
           </div>
           <div>
             <span style={{ marginRight: "10px" }}>
-              <img
-                src="./twitter.svg"
-                alt="Twitter Logo"
-                height={"40px"}
-                style={{
-                  marginRight: "5px",
-                  cursor: "pointer",
-                }}
-              />
+              <a
+                href="https://x.com/mumbaimetro3?lang=en"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="./twitter.svg"
+                  alt="Twitter Logo"
+                  height="40px"
+                  style={{
+                    marginRight: "5px",
+                    cursor: "pointer",
+                  }}
+                />
+              </a>
             </span>
             <span style={{ marginRight: "10px" }}>
               <img
@@ -698,15 +1068,22 @@ export const Dashboard = ({ name, ...props }) => {
               />
             </span>
             <span style={{ marginRight: "10px" }}>
-              <img
-                src="./facebook.svg"
-                alt="Facebook Logo"
-                height={"40px"}
-                style={{
-                  marginRight: "5px",
-                  cursor: "pointer",
-                }}
-              />
+              <a
+                href="https://www.facebook.com/mmrcmumbai/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ marginRight: "10px" }}
+              >
+                <img
+                  src="./facebook.svg"
+                  alt="Facebook Logo"
+                  height="40px"
+                  style={{
+                    marginRight: "5px",
+                    cursor: "pointer",
+                  }}
+                />
+              </a>
             </span>
           </div>
         </div>
@@ -720,6 +1097,7 @@ export const Dashboard = ({ name, ...props }) => {
             alignItems: "center",
             paddingBottom: "6px",
             fontSize: "small",
+            fontFamily: "poppins,sans-serif",
           }}
         >
           <div style={{ fontWeight: "600" }}>

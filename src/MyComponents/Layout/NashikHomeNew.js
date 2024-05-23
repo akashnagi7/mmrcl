@@ -49,6 +49,7 @@ import { useEffect } from "react";
 import Table from "react-bootstrap/Table";
 import PersonIcon from "@mui/icons-material/Person";
 import Swal from "sweetalert2";
+import { scale } from "ol/transform";
 
 const drawerWidth = 200;
 
@@ -1233,15 +1234,15 @@ const NashikHomeNew = (props) => {
                 // color="inherit"
                 onClick={handleLogout}
                 style={{
-                  transform: "scale(0.8)",
+                  transform: "scale(0.85)",
                   fontFamily: "poppins, sans-serif",
                   backgroundColor: "#E30613",
                   color: "white",
                   paddingLeft: "30px",
                   paddingRight: "30px",
                   textTransform: "none",
-                  borderRadius: "20px",
-                  height: "42px",
+                  borderRadius: "30px",
+                  height: "45px",
                 }}
               >
                 Logout
@@ -1250,14 +1251,15 @@ const NashikHomeNew = (props) => {
               <Button
                 onClick={handleLogin}
                 style={{
-                  transform: "scale(0.8)",
+                  transform: "scale(0.85)",
                   backgroundColor: "#E30613",
+                  fontFamily: "poppins, sans-serif",
                   color: "white",
                   paddingLeft: "30px",
                   paddingRight: "30px",
                   textTransform: "none",
-                  borderRadius: "20px",
-                  height: "42px",
+                  borderRadius: "30px",
+                  height: "45px",
                 }}
               >
                 Login
@@ -1316,6 +1318,8 @@ const NashikHomeNew = (props) => {
                       boxShadow:
                         "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px",
                       color: "#1C3B68",
+                      transform: "scale(0.85)",
+                      padding: "2px",
                     }}
                   />
                 </ListItemIcon>
@@ -1338,6 +1342,8 @@ const NashikHomeNew = (props) => {
                       boxShadow:
                         "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px",
                       color: "#1C3B68",
+                      transform: "scale(0.85)",
+                      padding: "2px",
                     }}
                   />
                 </ListItemIcon>
@@ -1360,6 +1366,8 @@ const NashikHomeNew = (props) => {
                       boxShadow:
                         "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px",
                       color: "#1C3B68",
+                      transform: "scale(0.85)",
+                      padding: "2px",
                     }}
                   />
                 </ListItemIcon>
@@ -1387,6 +1395,8 @@ const NashikHomeNew = (props) => {
                           boxShadow:
                             "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px",
                           color: "#1C3B68",
+                          transform: "scale(0.85)",
+                          padding: "2px",
                         }}
                       />
                     </ListItemIcon>
@@ -1417,6 +1427,7 @@ const NashikHomeNew = (props) => {
                           "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px",
                         color: "#1C3B68",
                         fontSize: "22px",
+                        transform: "scale(0.85)",
                       }}
                     ></i>
                   </ListItemIcon>
@@ -1443,7 +1454,7 @@ const NashikHomeNew = (props) => {
         <div style={{ marginTop: "64px", width: "-webkit-fill-available" }}>
           <NashikHomemain />
         </div>
-            
+
         <RightDrawer variant="permanent" open={rightopen} anchor="right">
           <DrawerHeader />
           <Divider />
@@ -1665,10 +1676,7 @@ const NashikHomeNew = (props) => {
               justifyContent: "space-between",
             }}
           >
-            <Typography
-              variant="body1"
-              color="inherit"
-            >
+            <Typography variant="body1" color="inherit">
               Copyright © 2024 MMRCL Geoportal. All rights reserved
             </Typography>
 

@@ -454,7 +454,12 @@ const LayerData = (props) => {
                       if (child) {
                         return (
                           <li key={child.id}>
-                            <div style={{ display: "flex" }}>
+                            <div
+                              style={{
+                                display: "flex",
+                                fontFamily: "poppins, sans-serif",
+                              }}
+                            >
                               <FormControlLabel
                                 control={
                                   <Checkbox
@@ -466,6 +471,7 @@ const LayerData = (props) => {
                                     style={{
                                       padding: "0px",
                                       transform: "scale(0.7)",
+                                      fontFamily: "poppins, sans-serif",
                                     }}
                                   />
                                 }
@@ -476,7 +482,13 @@ const LayerData = (props) => {
                                       alignItems: "center",
                                     }}
                                   >
-                                    <span>{child.title}</span>
+                                    <span
+                                      style={{
+                                        fontFamily: "poppins, sans-serif",
+                                      }}
+                                    >
+                                      {child.title}
+                                    </span>
                                   </div>
                                 }
                                 style={{ display: "flex" }}
