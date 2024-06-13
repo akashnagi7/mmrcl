@@ -238,6 +238,9 @@ const Mappart = (props) => {
   //     url: "/baselayer/Nashik.ecw",
   //   },
   // });
+
+  const mapboxAccessToken =
+    "pk.eyJ1IjoiYWJoaTE5MDYiLCJhIjoiY2x3a2M5Z2ppMTV2YjJqcGZwdWZ2dmN4YiJ9.sUYFSoYi6ZaG59Sst_66RA";
   return (
     <>
       {!props.myvectoredittoggle &&
@@ -257,6 +260,7 @@ const Mappart = (props) => {
                       // url: "https://mt0.google.com/vt/lyrs=s,h&hl=en&x={x}&y={y}&z={z}",
                       // url: "https://mt0.google.com/vt/lyrs=p&hl=en&x={x}&y={y}&z={z}",
                       url: "https://mt0.google.com/vt/lyrs=r&hl=en&x={x}&y={y}&z={z}",
+                      // url: `https://api.mapbox.com/styles/v1/mapbox/satellite-v9/tiles/256/{z}/{x}/{y}?access_token=${mapboxAccessToken}`,
                     })
                   }
                   zIndex={0}
@@ -265,7 +269,7 @@ const Mappart = (props) => {
               ) : (
                 <>
                   <TileLayer
-                    source={WMSTile(layerServer, { LAYERS: "nmscdcl:Nashik" })}
+                    source={WMSTile(layerServer, { LAYERS: "mmrcl:mmrcl_raster" })}
                     zIndex={0}
                     opacity={1}
                     zoom={16}
@@ -275,7 +279,7 @@ const Mappart = (props) => {
 
               {/* {showNasikLayer && (
             <TileLayer
-              source={WMSTile(layerServer, { LAYERS: "nmscdcl:Nashik" })}
+              source={WMSTile(layerServer, { LAYERS: "mmrcl:mmrcl_raster" })}
               zIndex={0}
               opacity={1}
             />
@@ -522,7 +526,7 @@ const Mappart = (props) => {
               ) : (
                 <>
                   <TileLayer
-                    source={WMSTile(layerServer, { LAYERS: "nmscdcl:Nashik" })}
+                    source={WMSTile(layerServer, { LAYERS: "mmrcl:mmrcl_raster" })}
                     zIndex={0}
                     opacity={1}
                     zoom={16}
@@ -651,7 +655,7 @@ const Mappart = (props) => {
               ) : (
                 <>
                   <TileLayer
-                    source={WMSTile(layerServer, { LAYERS: "nmscdcl:Nashik" })}
+                    source={WMSTile(layerServer, { LAYERS: "mmrcl:mmrcl_raster" })}
                     zIndex={0}
                     opacity={1}
                     zoom={16}
@@ -776,7 +780,7 @@ const Mappart = (props) => {
               ) : (
                 <>
                   <TileLayer
-                    source={WMSTile(layerServer, { LAYERS: "nmscdcl:Nashik" })}
+                    source={WMSTile(layerServer, { LAYERS: "mmrcl:mmrcl_raster" })}
                     zIndex={0}
                     opacity={1}
                     zoom={16}

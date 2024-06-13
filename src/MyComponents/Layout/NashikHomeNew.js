@@ -1217,7 +1217,7 @@ const NashikHomeNew = (props) => {
                   Guest User
                   <img
                     style={{
-                      height: "20px",
+                      height: "18px",
                       marginTop: "2px",
                       float: "right",
                       paddingLeft: "10px",

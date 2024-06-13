@@ -483,7 +483,7 @@ const LayerData = (props) => {
                                     }}
                                   >
                                     <span
-                                      style={{
+                                      style={{  
                                         fontFamily: "poppins, sans-serif",
                                       }}
                                     >

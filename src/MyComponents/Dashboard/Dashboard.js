@@ -217,6 +217,10 @@ export const Dashboard = ({ name, ...props }) => {
       });
   }
 
+  function handleRightClick(){
+
+  }
+
   return (
     <>
       <AppBar position="flex" sx={{ bgcolor: "#ffffff" }}>
@@ -461,6 +465,7 @@ export const Dashboard = ({ name, ...props }) => {
                   src={rightSideArrow}
                   alt="rightSideArrow"
                   style={{ marginLeft: "15px", cursor: "pointer" }}
+                  // onClick={handleRightClick}
                 />
               </span>
             </div>
