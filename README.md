@@ -29,6 +29,6 @@ The portal is maintained into modules which are mentioned below.
    via email address.
 
 3. About us - /about
-   This part is about us page which displays information relevan to nashik smart city.
+   This part is about us page which displays information relevan to MMRCL project.
 
 4. Contact us - This displays contact information.
