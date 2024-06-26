@@ -19,6 +19,7 @@ import { Test } from "./MyComponents/Test/Test";
 import Forgot from "./MyComponents/Auth/Login/Forgot";
 import Reset from "./MyComponents/Auth/Login/Reset";
 import Otp from "./MyComponents/Auth/Login/Otp";
+import DashboardGis from "./MyComponents/Dashboard/DashboardGis";
 // axios.defaults.baseURL = "http://192.168.1.17:9023/nmscdcl/";
 // axios.defaults.baseURL = "http://10.202.101.108:9023/nmscdcl/";
 // axios.defaults.baseURL = "http://192.168.1.136:9000/nmscdcl/";
@@ -38,6 +39,7 @@ function App() {
       <Route path="/forgot" element={<Forgot />} />
       <Route path="/reset" element={<Reset />} />
       <Route path="/otp" element={<Otp />} />
+      <Route path="/dashboard-gis" element={<DashboardGis />} />
 
       {/* <Route path="/" element={<Protected />}> */}
       <Route path="home" element={<NashikHomeNew />} />

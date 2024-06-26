@@ -1124,9 +1124,14 @@ const NashikHomeNew = (props) => {
     window.location.replace("/Usermanagement");
   };
 
-  const handleUserDashboard = () => {
+  const handleUserHome = () => {
     console.log("Handle User Dashboard");
     window.location.replace("/dashboard");
+  };
+
+  const handleUserDashboard = () => {
+    console.log("Handle User Dashboard");
+    window.location.replace("/dashboard-gis");
   };
 
   function handleHomeLogo() {
@@ -1410,6 +1415,36 @@ const NashikHomeNew = (props) => {
             ) : null}
 
             <span>
+              <ListItemButton onClick={handleUserHome}>
+                <Tooltip title="Back to Home Page">
+                  <ListItemIcon>
+                    <i
+                      class="fa fa-home"
+                      aria-hidden="true"
+                      style={{
+                        borderRadius: "50%",
+                        width: "30px",
+                        height: "30px",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        boxShadow:
+                          "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px",
+                        color: "#1C3B68",
+                        fontSize: "22px",
+                        transform: "scale(0.85)",
+                      }}
+                    ></i>
+                  </ListItemIcon>
+                </Tooltip>
+                <Typography style={{ fontSize: "12px" }}>
+                  Back to Home Page
+                </Typography>
+              </ListItemButton>
+              <Divider />
+            </span>
+
+            {/* <span>
               <ListItemButton onClick={handleUserDashboard}>
                 <Tooltip title="Back to Dashboard">
                   <ListItemIcon>
@@ -1437,7 +1472,7 @@ const NashikHomeNew = (props) => {
                 </Typography>
               </ListItemButton>
               <Divider />
-            </span>
+            </span> */}
 
             {/* <ListItemButton onClick={(event) => handleClick("Layout")}>
               <Tooltip title="Layout">
